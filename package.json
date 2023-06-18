@@ -1,0 +1,19 @@
+{
+  "repository": "#",
+  "license": "MIT License",
+  "scripts": {
+    "dev": "vite serve --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "stats.js": "^0.17.0",
+    "stylus": "^0.58.1",
+    "three": "^0.141.0",
+    "tweakpane": "^3.1.7",
+    "vercel": "^28.18.3",
+    "vite": "^2.9.12",
+    "vite-plugin-glsl": "^0.1.2"
+  }
+}

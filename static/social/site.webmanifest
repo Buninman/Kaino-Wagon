@@ -1,0 +1,19 @@
+{
+	"name": "Kaino Wagon by Buninman",
+	"short_name": "Kaino Wagon",
+	"icons": [
+			{
+					"src": "/social/android-chrome-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png"
+			},
+			{
+					"src": "/social/android-chrome-256x256.png",
+					"sizes": "256x256",
+					"type": "image/png"
+			}
+	],
+	"theme_color": "#4b9bfb",
+	"background_color": "#4b9bfb",
+	"display": "standalone"
+}
