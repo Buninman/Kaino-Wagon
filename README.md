@@ -1,9 +1,18 @@
 ![alt text](static/social/share-1200x630.jpg "preview jpg")
 
 # Kaino Wagon. My first three.js website
+The website was created for learning purposes. I tried to use everything I learned. The website may be quite meaningless, but it looks good, doesn't it? 
 You can see it here:
 https://kaino-wagon.vercel.app/
 
+- The loader and 3D model were created in Blender 
+- All animation was created using JS and GLSL
+- All textures are created by baking. There is no light in the scene
+- The website code is available on my [Github](https://github.com/Buninman/Kaino-Wagon/tree/main) 
+
+It was a long journey in learning JS, Three.js, and Blender. I am very grateful to Bruno Simon for creating such an inspiring portfolio with the red car. I am glad to learn from the best. I bought his course and am happy to learn from the best.
+
+I'm on [Twitter](https://twitter.com/Buninman)
 ---
 
 ### Setup
