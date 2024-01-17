@@ -16,6 +16,8 @@ export default class Camera {
 		// Set up
 		this.mode = 'debug' // defaultCamera \ debugCamera
 
+		this.debugActiveCamera = true
+
 		this.setInstance()
 		this.setModes()
 		this.addDebug()
@@ -58,7 +60,7 @@ export default class Camera {
 			this.modes.debug.orbitControls.enablePan = false
 			this.modes.debug.orbitControls.zoomSpeed = 0.5
 			this.modes.debug.orbitControls.rotateSpeed = 0.25
-			this.modes.debug.orbitControls.autoRotate = true
+			this.modes.debug.orbitControls.autoRotate = this.debugActiveCamera
 			this.modes.debug.orbitControls.autoRotateSpeed = -0.5
 			this.modes.debug.orbitControls.enableDamping = true
 			this.modes.debug.orbitControls.dampingFactor = 0.01
@@ -85,9 +87,22 @@ export default class Camera {
 			this.debug.cameraFolder
 				.addInput(this.modes.debug.orbitControls, 'rotateSpeed',
 					{ min: 0, max: 2, step: 0.05, label: 'Rotate Speed' })
+			// this.debug.cameraFolder
+			// 	.addInput(this.modes.debug.orbitControls, 'autoRotate',
+			// 		{ label: 'Auto Rotate' })
 			this.debug.cameraFolder
-				.addInput(this.modes.debug.orbitControls, 'autoRotate',
-					{ label: 'Auto Rotate' })
+				.addButton( {label: 'Auto Rotate', title: 'Stop / Start'})
+				.on('click', () => {
+					if (this.modes.debug.orbitControls.autoRotate) {
+						this.modes.debug.orbitControls.autoRotate = false
+						this.debugActiveCamera = false
+					} else {
+						this.modes.debug.orbitControls.autoRotate = true
+						this.debugActiveCamera = true
+					}
+					
+				})
+
 			this.debug.cameraFolder
 				.addInput(this.modes.debug.orbitControls, 'autoRotateSpeed',
 					{ min: -5, max: 5, step: 0.1, label: 'Auto Rotate Speed' })

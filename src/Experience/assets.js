@@ -22,6 +22,9 @@ export default [
 			{ name: 'informersTargets', source: '/assets/informersTargets.glb', type: 'model' },
 			{ name: 'informersTexture', source: '/assets/informers.jpg', type: 'texture' },
 			{ name: 'informersTextureLight', source: '/assets/informersLight.jpg', type: 'texture' },
+
+			// Music
+			// { name: 'music', source: '/assets/music.mp3', type: 'mp3' },
 		]
 	},
 ]

@@ -11,6 +11,10 @@ export default class Resources extends EventEmitter
 		// Items (will contain every resources)
 		this.items = {}
 
+		// Music
+		this.music = new Audio('/assets/music.mp3')
+		this.music.loop = true
+
 		// Loader
 		this.loader = new Loader({ renderer: this.renderer })
 

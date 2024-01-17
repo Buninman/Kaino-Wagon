@@ -34,7 +34,7 @@ export default class Experience {
 		this.sizes = new Sizes()
 
 		this.setDebug()
-		this.setStats()
+		// this.setStats()
 		this.setScene()
 		this.setCamera()
 		this.setRenderer()
@@ -90,9 +90,12 @@ export default class Experience {
 			this.setHtmlTimer((Math.round(_progress.loaded / _progress.toLoad * 100)) + '%')
 		})
 		this.resources.on('end', (_progress) => {
+			this.setHtmlTimer('Done')
 			window.setTimeout(() => {
+				this.config.html_experience.classList.remove('cursorBlack')
 				this.config.html_loader.classList.add('unvisible')
 				this.config.html_credits.classList.remove('unvisible')
+				this.config.html_music.classList.remove('unvisible')
 				this.setHtmlTimer('')
 				this.config.loaderIsHidden = true
 				this.debug.title = 'Play With Me'

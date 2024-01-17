@@ -1,90 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaino Wagon</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kaino Wagon</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
-		<link rel="stylesheet" href="./css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./css/style.css">
 
-    <meta itemprop="name" content="Kaino Wagon — Learning">
-    <meta itemprop="description" content="Creative WebGL experiment with Three.js">
-    <meta itemprop="image" content="/social/share-1200x630.jpg">
+	<meta itemprop="name" content="Kaino Wagon">
+	<meta itemprop="description" content="Creative WebGL experiment with Three.js">
+	<meta itemprop="image" content="/social/share-1200x630.jpg">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kaino Wagon — Learning">
-    <meta name="twitter:description" content="Creative WebGL experiment with Three.js">
-    <meta name="twitter:image" content="/social/share-1200x630.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Kaino Wagon">
+	<meta name="twitter:description" content="Creative WebGL experiment with Three.js">
+	<meta name="twitter:image" content="/social/share-1200x630.jpg">
 
-    <meta property="og:site_name" content="Kaino Wagon — Learning">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kaino-wagon.vercel.app/">
-    <meta property="og:title" content="Kaino Wagon — Learning">
-    <meta property="og:description" content="Creative WebGL experiment with Three.js">
-    <meta property="og:image" content="/social/share-1200x630.jpg">
+	<meta property="og:site_name" content="Kaino Wagon">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://kaino-wagon.vercel.app/">
+	<meta property="og:title" content="Kaino Wagon">
+	<meta property="og:description" content="Creative WebGL experiment with Three.js">
+	<meta property="og:image" content="/social/share-1200x630.jpg">
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/social/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="120x120" href="/social/favicon-120x120.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/social/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/social/favicon-16x16.png">
-		<link rel="manifest" href="/social/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="/social/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="120x120" href="/social/favicon-120x120.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/social/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/social/favicon-16x16.png">
+	<link rel="manifest" href="/social/site.webmanifest">
 
 </head>
-	<body>
+<body>
 
-		<div class="experience"></div>
+	<div class="experience cursorBlack"></div>
 
-		<div class="loader">
-			<img src="./assets/loader.webp" height="370">
-			<div id="htmlLoaderTimer" class="timer"></div>
+	<div class="loader">
+		<img src="./assets/loader.webp" height="370">
+		<div id="htmlLoaderTimer" class="timer"></div>
+	</div>
+
+	<div class="music unvisible">
+		<div class="musicKey pointer">
+			<svg class="square_button"><use class="musicSvg" href="./social/icoMusicOffThin.svg#idIco"></use></svg>
 		</div>
+	</div>
 
-		<div class="credits unvisible">
-			<div class="pic loaderKey">
-				<svg class="rot"><use href="./social/icoLoader.svg#idIco"></use></svg>
+	<div class="credits unvisible">
+		<div class="creditsBlock">
+			<p class="item text" >Do you like this?</p>
+		</div>
+		<div class="creditsBlock">
+			<a class="item donateKey" href="https://boosty.to/buninman/donate" target="_blank">
+				<svg class="long_button"><use href="./social/icoDonate.svg#idIco"></use></svg>
+			</a>
+		</div>
+		<div class="creditsBlock">
+			<div class="item loaderKey pointer">
+				<svg class="loaderKeySvg square_button"><use href="./social/icoLoader.svg#idIco"></use></svg>
 			</div>
-			<!-- <div class="pic iKey">
-				<svg><use href="./social/icoInfo.svg#idIco"></use></svg>
-			</div> -->
-			<a class="pic" href="https://twitter.com/Buninman" target="_blank">
-				<svg><use href="./social/icoTwitter.svg#idIco"></use></svg>
+			<a class="item" href="https://github.com/Buninman" target="_blank">
+				<svg class="square_button"><use href="./social/icoGithub.svg#idIco"></use></svg>
 			</a>
-			<a class="pic" href="https://github.com/Buninman" target="_blank">
-				<svg><use href="./social/icoGithub.svg#idIco"></use></svg>
+			<a class="item" href="https://discord.gg/bXbsGT8Hm8" target="_blank">
+				<svg class="square_button"><use href="./social/icoDiscord.svg#idIco"></use></svg>
 			</a>
-			<a class="pic" href="https://t.me/buninman" target="_blank">
-				<svg><use href="./social/icoTelegram.svg#idIco"></use></svg>
+			<a class="item" href="https://vk.ru/threejsjourney" target="_blank">
+				<svg class="square_button"><use href="./social/icoVK.svg#idIco"></use></svg>
 			</a>
 			<a class="bruno" href="https://threejs-journey.com/" target="_blank">
-				<svg><use href="./social/icoBruno.svg#idIco"></use></svg>
+				<svg class="square_button"><use href="./social/icoBruno.svg#idIco"></use></svg>
 			</a>
 		</div>
+	</div>
+	
 
-		<div class="information">
-			<div id="htmlInformer" class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, enim et tempora ea dignissimos totam commodi iure molestias itaque eos omnis harum alias minus fuga explicabo aspernatur incidunt perferendis quae!
-				<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum beatae ea velitt in aspernatur iure, natus quas, ipsum asperiores illo corporis officia? Dolore libero inventore porro cumque quibusdam reprehenderit aliquam.
-			</div>
+	<div class="information noselect">
+		<div id="htmlInformer" class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, enim et tempora ea dignissimos totam commodi iure molestias itaque eos omnis harum alias minus fuga explicabo aspernatur incidunt perferendis quae!
+			<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum beatae ea velitt in aspernatur iure, natus quas, ipsum asperiores illo corporis officia? Dolore libero inventore porro cumque quibusdam reprehenderit aliquam.
 		</div>
-		<script type="module" src="./script.js"></script>
+	</div>
+	<script type="module" src="./script.js"></script>
 
-		<script type="text/javascript" >
-			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-			m[i].l=1*new Date();
-			for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-			k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	// This is Yandex Metrica script. https://metrica.yandex.com/about
+	<script type="text/javascript" >
+		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		m[i].l=1*new Date();
+		for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+		k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-			ym(93544529, "init", {
-					clickmap:true,
-					trackLinks:true,
-					accurateTrackBounce:true,
-					webvisor:true
-			});
-		</script>
-		<noscript><div><img src="https://mc.yandex.ru/watch/93544529" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		ym(93544529, "init", {
+				clickmap:true,
+				trackLinks:true,
+				accurateTrackBounce:true,
+				webvisor:true
+		});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/93544529" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
-	</body>
+</body>
 </html>

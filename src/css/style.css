@@ -12,12 +12,39 @@ html,
 body {
 	overflow: hidden;
 	background: #3B3F49;
+	cursor: url(cursor.png), default;
 }
 a {
+	cursor: url(pointer.png), pointer;
 	color: inherit;
 }
+.pointer {
+	cursor: url(pointer.png), pointer;
+}
+.cursorBlack,
+.tp-dfwv label,
+.tp-dfwv div {
+	cursor: url(cursorBlack.png), default;
+}
+.pointerBlack,
+.tp-dfwv button,
+.tp-dfwv svg,
+.tp-btnv div,
+.tp-fldv_b div,
+.tp-rotv_b div,
+.tp-sldtxtv_s div {
+	cursor: url(pointerBlack.png), pointer;
+}
 
-/**** Loader ****/
+
+
+/**** Threejs ****/
+
+.experience {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+}
 
 .loader {
 	position: absolute;
@@ -30,9 +57,6 @@ a {
 	background: #3B3F49;
 	pointer-events: none;
 }
-.loader.unvisible {
-	opacity: 0;
-}
 .loader .timer {
 	position: absolute;
 	font-weight: 700;
@@ -43,58 +67,128 @@ a {
 	display: block;
 	height: 180px;
 	width: 180px;
-	background: #4b9bfb;
+	/* background: #4b9bfb; */
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
-/**** Threejs ****/
-
-.experience {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
+.unvisible {
+	opacity: 0;
+	pointer-events: none;
 }
 
 /**** Social ****/
 
-.credits {
-	display: flex;
-	align-items: center;
+.music {
 	position: absolute;
+	display: flex;
+	justify-content: center;
+	/* border: 1px solid red; */
+	width: 100%;
+	top: 3%;
+	color: rgba(255,255,255,0.7);
+}
+@media (max-width:720px) {
+	.music {
+		color: rgba(255,255,255,0.5);
+		top: 10%;
+	}
+}
+.music .square_button {
+	height: 36px;
+	width: 36px;	
+}
+.music .pointer:hover {
+	color: rgba(255,255,255,0.9);
+}
+.music .active {
+	color: rgba(255,255,255,0.9);
+}
+/**** Social ****/
+
+.credits {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end;
+	align-items: end;
+	align-content: flex-end;
 	bottom: 26px;
 	right: 26px;
 	color: rgba(255,255,255,0.7);
-	
 }
-@media (min-width:720px) {
-	.credits :hover {
-		color: rgba(255,255,255,0.9);
-	}
+.creditsBlock {
+	display: flex;
+	justify-content: end;
+	align-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 8px;
+	height: 28px;
+}
+.credits .text {
+	color: rgba(255,255,255,0.9);
+	position: relative;
+	bottom: 2px;
+	padding-left: 26px;
+	pointer-events: none;
+
 }
 @media (max-width:720px) {
 	.credits {
 		color: rgba(255,255,255,0.5);
 		bottom: 16px;
 	}
+	.credits .text {
+		color: rgba(255,255,255,0.7);
+	}
 }
-.credits svg {
+.credits a:hover {
+	color: rgba(255,255,255,0.9);
+}
+.credits .pointer:hover {
+	color: rgba(255,255,255,0.9);
+}
+.credits .square_button {
 	height: 26px;
 	width: 26px;	
 }
-.credits .pic {
-	cursor: pointer;
+.credits .long_button {
+	height: 26px;
+	width: 111px;
+}
+.item {
 	margin-right: 8px;
 }
-.credits .bruno {
+.bruno {
 	margin-left: 16px;
 }
-.credits.unvisible {
-	opacity: 0;
-	pointer-events: none;
+@media (max-width:250px) {
+	.bruno {
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+	}
 }
 
-svg.rot {
+.credits .active {
+	color: rgba(255,255,255,0.9);
+}
+
+.loaderKeySvg {
 	animation: 2s linear 0s normal none infinite running rot;
+	/* animation-play-state: running; */
   /* -webkit-animation: 1s linear 0s normal none infinite running rot; */
+}
+.paused-animation {
+	animation-play-state: paused;
 }
 @keyframes rot {
   0% {
@@ -104,14 +198,6 @@ svg.rot {
     transform: rotate(360deg);
   }
 }
-/* @-webkit-keyframes rot {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
 
 /**** Information ****/
 
@@ -120,6 +206,7 @@ svg.rot {
 	display: flex;
 	justify-content: center;
 	align-items: end;
+	/* bottom: 126px; */
 	bottom: 29px;
 	width: 100vw;
 	height: 100vh;
@@ -129,7 +216,7 @@ svg.rot {
 }
 .information .text {
 	position: absolute;
-	width: 50%;
+	width: 45%;
 	padding: 20px;
 	border-radius: 10px;
 	background: rgba(255,255,255,0.7);
@@ -160,11 +247,30 @@ svg.rot {
 	vertical-align:middle
 } */
 
-@media (max-width:720px) {
+@media (max-width:1720px) {
 	.information {
-		bottom: 64px;
+		bottom: 72px;
 	}
 	.information .text {
+		/* width: 50%; */
+		width: 60%;
+	}
+}
+@media (max-width:420px) {
+	.information {
+		bottom: 96px;
+	}
+	.information .text {
+		/* width: 50%; */
+		width: 85%;
+	}
+}
+@media (max-width:300px) {
+	.information {
+		bottom: 126px;
+	}
+	.information .text {
+		/* width: 50%; */
 		width: 85%;
 	}
 }

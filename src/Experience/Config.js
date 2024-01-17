@@ -47,10 +47,16 @@ export default class Config {
 		// Loader
 		this.html_loader = document.querySelector('.loader')
 		this.html_loaderKey = document.querySelector('.loaderKey')
+		this.html_loaderKeySvg = document.querySelector('.loaderKeySvg')
+
+		// Music
+		this.html_musicKey = document.querySelector('.musicKey')
+		this.html_musicSvg = document.querySelector('.musicSvg')
+		this.html_music = document.querySelector('.music')
 
 		// Informers
+		this.html_experience = document.querySelector('.experience')
 		this.html_credits = document.querySelector('.credits')
-		// this.html_iKey = document.querySelector('.iKey')
 		this.html_textBlock = document.querySelector('.information')
 
 		this.icoBruno = `I learned how to make 3D websites in the
@@ -68,18 +74,20 @@ export default class Config {
 				<svg><use href="./social/icoGithub.svg#idIco"></use></svg>
 				Github!</a>`
 
-		this.icoMail = `If you want to talk, then just write to me in
-			<a href="https://t.me/buninman" target="_blank">
-				<svg><use href="./social/icoTelegram.svg#idIco"></use></svg>
-				Telegram</a>,
-			<a href="https://twitter.com/Buninman" target="_blank">
-				<svg><use href="./social/icoTwitter.svg#idIco"></use></svg>
-				Twitter</a>
-			or join my
+		this.icoMail = `If you want to talk, then join my
+			
+			<a href="https://discord.gg/bXbsGT8Hm8" target="_blank">
+				<svg><use href="./social/icoDiscord.svg#idIco"></use></svg>
+				Discord,</a>
 			<a href="https://vk.ru/threejsjourney" target="_blank">
 				<svg><use href="./social/icoVK.svg#idIco"></use></svg>
 				VK</a>
-			(ru)`
+			(ru),
+			or just write to me on
+			<a href="https://t.me/buninman" target="_blank">
+				<svg><use href="./social/icoTelegram.svg#idIco"></use></svg>
+				Telegram</a>`
+			
 
 		this.icoKaino = `The model of the house was made in Blender.
 			I followed a free course from Kaino School (ru). I recommend 	the YouTube channels
