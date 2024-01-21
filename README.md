@@ -9,7 +9,7 @@ https://kaino-wagon.vercel.app/
 2024-01
 
 - Added a [donation](https://boosty.to/buninman/donate) button so that all those who care could contribute to the production of new interesting websites and games.
-- Added a link to [Discord](https://discord.gg/bXbsGT8Hm8), as I now have a server where I invite people to chat and stay connected.
+- Added a link to [Discord](https://discord.gg/3W2GkhA32p), as I now have a server where I invite people to chat and stay connected.
 - Added music.
 - Fixed a bug where multiple hints could be selected at once.
 - Now, when hovering over a hint, the camera stops rotating.
